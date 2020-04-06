@@ -16,13 +16,6 @@
  */
 package org.apache.kafka.connect.transforms;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import org.apache.kafka.connect.data.Field;
 import org.apache.kafka.connect.data.Schema;
 import org.apache.kafka.connect.data.SchemaBuilder;
@@ -31,6 +24,14 @@ import org.apache.kafka.connect.errors.DataException;
 import org.apache.kafka.connect.sink.SinkRecord;
 import org.junit.After;
 import org.junit.Test;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertSame;
 
 public class SetSchemaMetadataTest {
     private final SetSchemaMetadata<SinkRecord> xform = new SetSchemaMetadata.Value<>();
